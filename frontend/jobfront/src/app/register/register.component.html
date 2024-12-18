@@ -9,48 +9,49 @@
                 <li class="list-group-item">Work-Life Balance and Well-being</li>
                 <li class="list-group-item">Career Exploration</li>
                 <li class="list-group-item">Job Search Resources</li>
-                <li class="list-group-item">Career Development Tools</li>
-
-              </ul>
+                <li class="list-group-item">Career Development Tools</li></ul>
         </div>
         <div class="col-sm-9">
             <h1 class="text-center">Register Here</h1>
-            <form>
+            <form (ngSubmit)="submitdata()">
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <input type="text" class="form-control" id="name" name="name">
+                    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="reg.name">
                   </div>
                   <div class="form-group">
-                    <label for="address"><Address:</label>
-                    <input type="text" class="form-control" id="address" name="address">
+                    <label for="address">Address:</label>
+                    <input type="text" class="form-control" id="address" name="address"  [(ngModel)]="reg.address">
                   </div>
                   <div class="form-group">
                     <label for="city">City:</label>
-                    <select class="email" class="form-control" id="city" name="city">
+                    <select class="email" class="form-control" id="city" name="city"  [(ngModel)]="reg.city">
                         <option value="">--select--</option>
                         <option>satara</option>
                         <option>pune</option>
                         <option>mumbai</option>
                         </select>
                   </div>
+                <label>Gender</label>
                   <label class="radio-inline">
-                    <input type="radio" name="gender" value="Male" >Male</label>
+                    <input type="radio" name="gender" value="Male"  >Male</label>
+                    <label class="radio-inline" [(ngModel)]="reg.gender">
+                        <input type="radio" name="gender" value="Female"[(ngModel)]="reg.gender">Female</label>
                     <label class="radio-inline">
-                        <input type="radio" name="gender" value="Female">Female</label>
-                    <label class="radio-inline">
-                        <input type="radio" name="gender"value="other">other</label>
+                        <input type="radio" name="gender"value="other"[(ngModel)]="reg.gender">other</label>
+                        <div class="form-group">
+                            <label for="contant">contant:</label>
+                            <input type="tel" class="form-control" id="contant" name="contant"[(ngModel)]="reg.contant">
+                             </div>
                 <div class="form-group">
-                  <label for="email">Email address:</label>
-                  <input type="email" class="form-control" id="email">
-                </div>
+                        <label for="emailid">Email address:</label>
+                        <input type="emailid" class="form-control" id="emailid" name="emailid"[(ngModel)]="reg.emailid">
+                         </div>
                 <div class="form-group">
-                  <label for="pwd">Password:</label>
-                  <input type="password" class="form-control" id="pwd">
+                  <label for="password">Password:</label>
+                  <input type="password" class="form-control" id="password" name="password"[(ngModel)]="reg.password">
                 </div>
-                <div class="checkbox">
-                  <label><input type="checkbox"> Remember me</label>
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
               </form>
 
         </div>
