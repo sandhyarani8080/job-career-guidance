@@ -3,7 +3,6 @@ package com.symbiosis.job.career.guidance.service;
 import java.util.List;
 
 import com.symbiosis.job.career.guidance.model.Registration;
-import com.symbiosis.job.career.guidance.model.Registration;
 
 public interface RegistrationService {
 	
@@ -12,5 +11,5 @@ public interface RegistrationService {
 		void del (int ri);
 		Registration updaterecord(int i,Registration r);
 
-
+List<Registration> login(String emailid,String password);
 }

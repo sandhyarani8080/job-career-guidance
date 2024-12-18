@@ -50,14 +50,16 @@ public class RegistrationServiceImpl implements RegistrationService  {
 			rold.setContant(r.getContant());
 			rold.setEmailid(r.getEmailid());
 			rold.setPassword(r.getPassword());
-			return regRepo.save(rold);
-
-
-
-			
+			return regRepo.save(rold);	
 			
 		}
 		return null;
+	}
+
+	@Override
+	public List<Registration> login(String emailid, String password) {
+		// TODO Auto-generated method stub
+		return regRepo.findAllByEmailidAndPassword(emailid, password);
 	}
 
 }
