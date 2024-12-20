@@ -8,7 +8,8 @@
         </button>
         <a class="navbar-brand" routerLink="#">job Site</a>
       </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
+    <div [ngSwitch]="menutype">
+      <div class="collapse navbar-collapse" id="myNavbar" *ngSwitchCase="'guest'">
         <ul class="nav navbar-nav">
           <li class="active"><a routerLink="/">Home</a></li>
           <li><a routerLink="/enquiry">Enquiry</a></li>
@@ -22,5 +23,19 @@
 
         </ul>
       </div>
+      <div class="collapse navbar-collapse" id="myNavbar" *ngSwitchCase="'user'">
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/">Home</a></li>
+          <li><a routerLink="/enquiry">Enquiry</a></li>
+          <li><a routerLink="/aboutus">Aboutus</a></li>
+          
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a routerLink="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><a routerLink="/admin-login"><span class="glyphicon glyphicon-log-in"></span>admin-login </a></li>
+
+        </ul>
+      </div>
     </div>
-  </nav>
+    </div>

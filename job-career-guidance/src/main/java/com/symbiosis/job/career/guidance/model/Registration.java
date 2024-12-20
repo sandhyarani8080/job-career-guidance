@@ -11,19 +11,19 @@ public class Registration {
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
 private int regid;
-private String name,address,city,gender,contant,emailid,password;
+private String name,address,city,gender,contact,emailid,password;
 public Registration() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-public Registration(String name, String address, String city, String gender, String contant, String emailid,
+public Registration(String name, String address, String city, String gender, String contact, String emailid,
 		String password) {
 	super();
 	this.name = name;
 	this.address = address;
 	this.city = city;
 	this.gender = gender;
-	this.contant = contant;
+	this.contact = contact;
 	this.emailid = emailid;
 	this.password = password;
 }
@@ -57,11 +57,11 @@ public String getGender() {
 public void setGender(String gender) {
 	this.gender = gender;
 }
-public String getContant() {
-	return contant;
+public String getContact() {
+	return contact;
 }
-public void setContant(String contant) {
-	this.contant = contant;
+public void setContact(String contact) {
+	this.contact = contact;
 }
 public String getEmailid() {
 	return emailid;
@@ -78,7 +78,7 @@ public void setPassword(String password) {
 @Override
 public String toString() {
 	return "Registration [regid=" + regid + ", name=" + name + ", address=" + address + ", city=" + city + ", gender="
-			+ gender + ", contant=" + contant + ", emailid=" + emailid + ", password=" + password + "]";
+			+ gender + ", contact=" + contact + ", emailid=" + emailid + ", password=" + password + "]";
 }
 
 	

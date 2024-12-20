@@ -12,7 +12,7 @@ import com.symbiosis.job.career.guidance.model.Registration;
 @Repository
 @Qualifier("regRepo")
 public interface RegistrationRepository extends JpaRepository<Registration, Integer> {
-@Query(value = "select * from registration where emailid:emailid and password=:password",nativeQuery=true)
+@Query(value = "select * from registration where emailid=:emailid and password=:password",nativeQuery=true)
 List<Registration> findAllByEmailidAndPassword(String emailid,String password);  
 
 }
